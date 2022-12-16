@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Box } from "@mui/system";
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Drawer, List, ListItemButton, Divider, Collapse, useMediaQuery } from "@mui/material";
+import { IconButton, Drawer, List, ListItemButton, Divider, useMediaQuery, Accordion, Typography, AccordionSummary, AccordionDetails  } from "@mui/material";
 import { Colors } from "../../../styles";
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 
@@ -30,18 +30,22 @@ function BackMenu() {
                 <Divider sx={{bgcolor:Colors.primary, marginLeft:"6%", marginRight:"10%"}}/>
                 <ListItemButton>Volonteer</ListItemButton>
                 <Divider sx={{bgcolor:Colors.primary, marginLeft:"6%", marginRight:"10%"}}/>
-                <ListItemButton onClick={handleClick} sx={{ justifyContent: 'space-between' }}>
-                    Stories
-                    {open ? <ExpandLess/> : <ExpandMore/>}
-                </ListItemButton>
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List >
-                        <Divider sx={{bgcolor:Colors.primary, marginLeft:"20%", marginRight:"20%"}}/>
-                        <ListItemButton sx={{ pl: 6 }}>Blog</ListItemButton>
-                        <Divider sx={{bgcolor:Colors.primary, marginLeft:"20%", marginRight:"20%"}}/>
-                        <ListItemButton sx={{ pl: 6 }}>Podcast</ListItemButton>
-                    </List>
-                </Collapse>
+                <Accordion style={{ boxShadow: "none" }} sx={{'&:before': {display: 'none', }}} >
+                    <AccordionSummary 
+                    sx={{backgroundColor: Colors.dark, color:Colors.white}}
+                    expandIcon={<ExpandMoreIcon />}
+                    >
+                        <Typography>Stories</Typography>
+                    </AccordionSummary>
+
+                    <AccordionDetails sx={{backgroundColor: Colors.dark, color:Colors.white, pl: 6}}>
+                        <Typography>Blog</Typography>
+                    </AccordionDetails>
+                    
+                    <AccordionDetails sx={{backgroundColor: Colors.dark, color:Colors.white, pl: 6}}>
+                        <Typography>Podcast</Typography>
+                    </AccordionDetails>
+                </Accordion>
                     
                 <Divider sx={{bgcolor:Colors.primary, marginLeft:"6%", marginRight:"10%"}}/>
                 <ListItemButton>Home</ListItemButton>
