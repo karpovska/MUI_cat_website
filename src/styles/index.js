@@ -1,3 +1,5 @@
+import { createTheme } from "@mui/material/styles";
+
 export const Colors = {
   primary: "#00adb5",
   secondary: "#00c7c0",
@@ -18,11 +20,38 @@ export const Colors = {
 };
 
 // TODO: define overrides object to create theme
-const overrides = { 
+const overrides = {
+  palette: {
+    primary: {
+      main: Colors.primary,
+    },
+    secondary: {
+      main: Colors.secondary,
+    },
+  },
+
+  components: {
+    DonateButton: {
+      styleOverrides: {
+        primary: {
+          background: Colors.primary,
+          "&:hover": {
+            background: "#66cdd2",
+          },
+        },
+        secondary: {
+          background: Colors.secondary,
+          "&:hover": {
+            background: "#66ddd9",
+          },
+        },
+      },
+    },
+  },
 };
 
 // TODO: use overrides object to create theme
-// const theme =;
+const theme = createTheme({});
 
 export { overrides };
 export default theme;
