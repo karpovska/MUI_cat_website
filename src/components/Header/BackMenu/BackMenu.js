@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box } from "@mui/system";
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Drawer, List, ListItemButton, Divider, Collapse } from "@mui/material";
+import { IconButton, Drawer, List, ListItemButton, Divider, Collapse, useMediaQuery } from "@mui/material";
 import { Colors } from "../../../styles";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 
@@ -10,6 +10,7 @@ import { ExpandLess, ExpandMore } from "@mui/icons-material";
 function BackMenu() {
     const [anchorElNav, setAnchorElNav] = useState(false);
     const [open, setOpen] = useState(false);
+    const showForLargeScreen  = useMediaQuery('(max-width:900px)');
 
     const toggleDrawer = (open) => (event) => {
         if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
@@ -51,7 +52,10 @@ function BackMenu() {
 
 
     return (
-        <Box sx={{ flexGrow: 1, display: { sm: 'block', md: 'none' }, }}>
+        <>
+            {showForLargeScreen 
+            &&
+             <Box sx={{ flexGrow: 1}}>
                 <IconButton onClick={toggleDrawer(true)}>
                     <MenuIcon/>
                 </IconButton>
@@ -64,6 +68,9 @@ function BackMenu() {
                     {list}
                 </Drawer>
             </Box>
+            }
+        </>
+       
     );
 }
 
