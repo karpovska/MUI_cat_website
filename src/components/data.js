@@ -1,6 +1,6 @@
 export const itemData = [
   {
-    img: "cat1.jfif",
+    img: "cat1.jpg",
     title: "Shyster",
   },
   {
@@ -8,7 +8,7 @@ export const itemData = [
     title: "Lazy",
   },
   {
-    img: "cat3.jfif",
+    img: "cat3.jpg",
     title: "Brandy",
   },
   {
