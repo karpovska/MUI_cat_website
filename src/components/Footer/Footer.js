@@ -1,6 +1,6 @@
 import { List, Typography, Grid, ListItemText, ListItem } from "@mui/material";
 import { Box } from "@mui/system";
-import Colors from "../../styles/index";
+import { Colors } from "../../styles/index";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -9,8 +9,8 @@ function Footer() {
   return (
     <Box
       sx={{
-        background: "#333",
-        color: "white",
+        background: Colors.shaft,
+        color: Colors.white,
         p: 10,
         pt: 10,
         pb: 10,
@@ -32,7 +32,7 @@ function Footer() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </Typography>
-          <Box sx={{ mt: 4, color: "#d5d5d5" }}>
+          <Box sx={{ mt: 4, color: Colors.dove_gray }}>
             <FacebookIcon sx={{ mr: 2 }}></FacebookIcon>
             <TwitterIcon sx={{ mr: 2 }}></TwitterIcon>
             <InstagramIcon sx={{ mr: 2 }}></InstagramIcon>
