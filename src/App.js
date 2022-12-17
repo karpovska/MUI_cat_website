@@ -6,7 +6,7 @@ import theme from "./styles/index";
 import ActionIcons from "./components/ActionIcons/ActionIcons";
 import NavBar from "./components/Header/Header";
 import Content from "./components/Content";
-
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -15,6 +15,7 @@ function App() {
         <ActionIcons />
         <Banner />
         <Content />
+        <Footer />
       </Stack>
     </ThemeProvider>
   );
