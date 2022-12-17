@@ -54,4 +54,5 @@ const overrides = {
 const theme = createTheme({});
 
 export { overrides };
-//export default theme;
+
+export default theme;
