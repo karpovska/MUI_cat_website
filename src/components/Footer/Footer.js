@@ -11,14 +11,14 @@ function Footer() {
       sx={{
         background: Colors.shaft,
         color: Colors.white,
-        p: 10,
+        p: { xs: 4, md: 10 },
         pt: 10,
         pb: 10,
         fontsize: "14px",
       }}
     >
       <Grid container spacing={4} justifyContent="center">
-        <Grid item md={12} lg={6} sm={6}>
+        <Grid item md={12} lg={6}>
           <Typography
             variant="body1"
             textTransform="uppercase"
