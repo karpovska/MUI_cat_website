@@ -7,18 +7,23 @@ import {
   Typography,
   ImageListItemBar,
   IconButton,
+  useMediaQuery,
 } from "@mui/material";
 import { itemData } from "../data";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {Colors} from "../../styles/index"
 
 const Content = () => {
+  
+  const threeCol = useMediaQuery('(min-width:900px)') && 3;
+  const oneCol = useMediaQuery('(max-width:600px)') && 1;
+  
   return (
     <Container>
       <Box display="flex" justifyContent={"center"} sx={{ p: 4 }}>
         <Typography variant="h4">Waiting for their owners</Typography>
       </Box>
-      <ImageList variant="masonry" cols={3} gap={10}>
+      <ImageList variant="masonry" cols={oneCol || threeCol || 2} gap={10}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
