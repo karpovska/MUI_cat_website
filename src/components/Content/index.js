@@ -17,7 +17,6 @@ const Content = () => {
   
   const threeCol = useMediaQuery('(min-width:900px)') && 3;
   const oneCol = useMediaQuery('(max-width:600px)') && 1;
-
   
   return (
     <Container>
