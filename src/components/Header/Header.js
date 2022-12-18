@@ -24,7 +24,6 @@ function NavBar() {
         </Typography>
         <NavMenu />
         <RightIcons />
-        <ActionIcons/>
       </Toolbar>
     </AppBar>
   );
