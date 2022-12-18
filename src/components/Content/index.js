@@ -5,8 +5,12 @@ import {
   Container,
   Box,
   Typography,
+  ImageListItemBar,
+  IconButton,
 } from "@mui/material";
 import { itemData } from "../data";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import {Colors} from "../../styles/index"
 
 const Content = () => {
   return (
@@ -23,6 +27,12 @@ const Content = () => {
               alt={item.title}
               loading="lazy"
             />
+          <ImageListItemBar
+            title={ item.title}
+            actionIcon={<IconButton>
+              <FavoriteIcon sx={{color:Colors.dove_gray, "&:hover": { color: Colors.info }}}/>
+            </IconButton>}
+          />
           </ImageListItem>
         ))}
       </ImageList>
