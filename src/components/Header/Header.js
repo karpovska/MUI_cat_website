@@ -4,6 +4,7 @@ import NavMenu from "./NavMenu/NavMenu";
 import BackMenu from "./BackMenu/BackMenu";
 import RightIcons from "./RightIcons/RightIcons";
 import { Colors } from "../../styles/index";
+import ActionIcons from "../ActionIcons/ActionIcons";
 
 function NavBar() {
   return (
@@ -23,6 +24,7 @@ function NavBar() {
         </Typography>
         <NavMenu />
         <RightIcons />
+        <ActionIcons/>
       </Toolbar>
     </AppBar>
   );
