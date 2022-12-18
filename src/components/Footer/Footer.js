@@ -18,7 +18,7 @@ function Footer() {
       }}
     >
       <Grid container spacing={4} justifyContent="center">
-        <Grid item md={12} lg={4} sm={6}>
+        <Grid item md={12} lg={6} sm={6}>
           <Typography
             variant="body1"
             textTransform="uppercase"
@@ -38,7 +38,7 @@ function Footer() {
             <InstagramIcon sx={{ mr: 2 }}></InstagramIcon>
           </Box>
         </Grid>
-        <Grid item md={6} lg={2} sm={6}>
+        <Grid item md={6} lg={2} xs={12} sm={6}>
           <Typography
             variant="body1"
             textTransform="uppercase"
@@ -64,7 +64,7 @@ function Footer() {
             </ListItemText>
           </List>
         </Grid>
-        <Grid item md={6} lg={2}>
+        <Grid item md={6} lg={2} sm={6}>
           <Typography
             variant="body1"
             textTransform="uppercase"
