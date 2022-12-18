@@ -9,6 +9,8 @@ import { Colors } from "../../../styles";
 
 function ActionIcons() {
     const showForLargeScreen  = useMediaQuery('(min-width:900px)');
+    const changeIconDistance  = useMediaQuery('(min-width:1200px)');
+    const distance = changeIconDistance ? 4 : 1;
 
     return(
         <>
@@ -24,7 +26,7 @@ function ActionIcons() {
                     m: 0.5,
                     },
                 '& hr': {
-                    mx: 3,
+                    mx: distance,
                     },
             }}
         >
