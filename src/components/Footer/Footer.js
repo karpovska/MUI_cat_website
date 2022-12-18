@@ -64,7 +64,7 @@ function Footer() {
             </ListItemText>
           </List>
         </Grid>
-        <Grid item md={6} lg={2} sm={6}>
+        <Grid item md={6} lg={2} sm={6} xs={12}>
           <Typography
             variant="body1"
             textTransform="uppercase"
