@@ -10,7 +10,7 @@ import { MenuBook } from "@mui/icons-material";
 
 function BackMenu() {
     const [state, setState] = useState({left: false});
-    const showForLargeScreen  = useMediaQuery('(max-width:900px)');
+    const showForLargeScreen  = useMediaQuery("(max-width:900px)");
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
